@@ -4,6 +4,7 @@
 
 // alert(`${string3}, ${string1}, ${string2}`);
 
+"use strict";
 
 function isValidName(name) {
     return /^[a-zA-Z]+$/.test(name.trim());
