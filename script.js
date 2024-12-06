@@ -1,33 +1,14 @@
-// const string1 = prompt("Enter your name:");
-// const string2 = prompt("Enter your surname:");
-// const string3 = prompt("Enter your age:");
+const string1 = prompt("Enter your name:");
+const string2 = prompt("Enter your surname:");
+const string3 = prompt("Enter your age:");
 
-// alert(`${string3}, ${string1}, ${string2}`);
-
-"use strict";
-
-function isValidName(name) {
-    return /^[a-zA-Z]+$/.test(name.trim());
+if (!string1 || !isNaN(string1)) {
+  alert("Invalid input: Name must be a non-empty string.");
+} else if (!string2 || !isNaN(string2)) {
+  alert("Invalid input: Surname must be a non-empty string.");
+} else if (!string3 || isNaN(string3) || Number(string3) <= 0) {
+  alert("Invalid input: Age must be a positive number.");
+} else {
+  alert(`${string3}, ${string1}, ${string2}`);
 }
-
-function isValidAge(age) {
-    return /^\d+$/.test(age.trim()) && parseInt(age, 10) > 0 && parseInt(age, 10) <= 120;
-}
-
-function getValidatedInput(promptText, validationFunction) {
-    let input;
-    do {
-        input = prompt(promptText).trim();
-        if (!validationFunction(input)) {
-            alert("Invalid input. Please try again.");
-        }
-    } while (!validationFunction(input));
-    return input;
-}
-
-const name = getValidatedInput("Enter your name:", isValidName);
-const surname = getValidatedInput("Enter your surname:", isValidName);
-const age = getValidatedInput("Enter your age:", isValidAge);
-
-alert(`${age}, ${name}, ${surname}`);
 
