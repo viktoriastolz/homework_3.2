@@ -2,7 +2,7 @@
 
 let userName;
 while (true) {
-  const usersNameInput = prompt("Enter your name:"); // string or null
+  const usersNameInput = prompt("Enter your name:");
   if (usersNameInput === null) {
     alert("Ok, bye");
     break;
