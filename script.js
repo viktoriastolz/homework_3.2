@@ -70,5 +70,5 @@ while (userName && userSurname) {
 }
 
 if (userName && userSurname && userAge !== undefined) {
-  alert(`Hello, ${userName} ${userSurname}! You are ${userAge} years old.`);
+  alert(`Hello, ${userSurname} ${userName}! You are ${userAge} years old.`);
 }
