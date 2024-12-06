@@ -59,11 +59,13 @@ while (userName && userSurname) {
   } else if (isNaN(usersAgeInput)) {
     alert("Error: Age must be a valid number");
   } else {
-    const age = +usersAgeInput;
+    const age = +usersAgeInput; 
     if (age <= 0 || age > 150) {
       alert("Error: Age must be between 1 and 150");
+    } else if (!Number.isInteger(age)) { 
+      alert("Error: Age must be an integer");
     } else {
-      userAge = Math.floor(age);
+      userAge = age;
       break;
     }
   }
