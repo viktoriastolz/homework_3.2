@@ -9,7 +9,7 @@ while (true) {
   } else if (!usersNameInput.trim()) {
     alert("Error: Name cannot be empty or whitespace");
   } else if (!/^[a-zA-Zа-яА-ЯёЁїЇіІєЄґҐ]+$/.test(usersNameInput.trim())) {
-    alert("Error: Name can only contain letters (Latin or Cyrillic)");
+    alert("Error: Name can only contain letters");
   } else if (/\s/.test(usersNameInput)) {
     alert("Error: Name cannot contain spaces");
   } else if (usersNameInput.length < 2) {
@@ -34,7 +34,7 @@ while (userName) {
   } else if (!usersSurnameInput.trim()) {
     alert("Error: Surname cannot be empty or whitespace");
   } else if (!/^[a-zA-Zа-яА-ЯёЁїЇіІєЄґҐ]+$/.test(usersSurnameInput.trim())) {
-    alert("Error: Surname can only contain letters (Latin or Cyrillic)");
+    alert("Error: Surname can only contain letters");
   } else if (/\s/.test(usersSurnameInput)) {
     alert("Error: Surname cannot contain spaces");
   } else if (usersSurnameInput.trim().charAt(0) !== usersSurnameInput.trim().charAt(0).toUpperCase() || 
